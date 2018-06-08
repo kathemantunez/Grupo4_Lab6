@@ -110,7 +110,8 @@ void cuidadores1(){
 
         case '3':
                 for(int i=0;i<v_cuidadores.size();i++){
-                    cout<<v_cuidadores[i]->getnombre()<<endl;
+                    v_cuidadores->toString();
+                    cout<<endl;
                 }
 
                 break;
@@ -143,10 +144,9 @@ void dinosaurios1(){
         case '2'://listar
                  for(int i=0;i<v_dinosaurio.size();i++){
                     v_dinosaurio[i]->toString();
-<<<<<<< HEAD
+
                     cout<<endl;
-=======
->>>>>>> b8accfb7a977eea2c74e524502ea2228c7f871e0
+
                 }
                 break;
         case '3'://modificar
@@ -273,13 +273,15 @@ void marinos1(){
         cin>>tipo;
         //string nombre, int altura, int peso, string fechaCreacion,
         // string sexo, int longitud,int numAletas,string tipo
+        cout<<"hola"<<endl;
         dino=new Marinos(nombre,altura,peso,fecha,sexo,longitud,num_aletas,tipo);
          v_dinosaurio.push_back(dino);
-          for(int i=0;v_cuidadores.size();i++){
+          for(int i=0;i<v_cuidadores.size();i++){
                     if(v_cuidadores[i]==c){
                          c->setdinosaurio(dino);
                     }
                 }
+                cout<<"adios"<<endl;
 
 
 }
@@ -351,7 +353,7 @@ void aereos1(){
         }
         dino=new Aereos(nombre,altura,peso,fecha,sexo,longitud,vuela,plumas);
         v_dinosaurio.push_back(dino);
-         for(int i=0;v_cuidadores.size();i++){
+         for(int i=0;i<v_cuidadores.size();i++){
                     if(v_cuidadores[i]==c){
                          c->setdinosaurio(dino);
                     }
@@ -447,7 +449,7 @@ void omnivoros1(){
 
     dino=new Oviraptor(nombre,altura,peso,fecha,sexo,longitud,num_molares,num_colmillos,altura_cresta,plumaje);
     v_dinosaurio.push_back(dino);
-     for(int i=0;v_cuidadores.size();i++){
+     for(int i=0;i<v_cuidadores.size();i++){
                     if(v_cuidadores[i]==c){
                          c->setdinosaurio(dino);
                     }
@@ -534,7 +536,7 @@ void herbivoros1(){
         // int incisivos, int longitudCuernos, int longitudCuernoNasal
         dino=new Triceratops(nombre,altura,peso,fecha,sexo,longitud,tipo,num_incisivos,long_cuernos,long_cuerno_nasal);
         v_dinosaurio.push_back(dino);
-         for(int i=0;v_cuidadores.size();i++){
+         for(int i=0;i<v_cuidadores.size();i++){
                     if(v_cuidadores[i]==c){
                          c->setdinosaurio(dino);
                     }
@@ -632,7 +634,7 @@ void carnivoros1(){
                 //string organo,string tipo,int consumoDiario,int numColmillos
                 dino=new TREX(nombre,altura,peso,fecha,sexo,longitud,organo_depredador,tipo,consumo_carne,colmillos);
                 v_dinosaurio.push_back(dino);
-                for(int i=0;v_cuidadores.size();i++){
+                for(int i=0;i<v_cuidadores.size();i++){
                     if(v_cuidadores[i]==c){
                          c->setdinosaurio(dino);
                     }
@@ -703,14 +705,13 @@ void carnivoros1(){
            //string nombre, int altura, int peso, string fechaCreacion, string sexo, int longitud,string organo,string tipo,int alturaEspina,int longBrazos
                 dino=new Spinosaurus(nombre,altura,peso,fecha,sexo,longitud,organo_depredador,tipo,altura_espina,log_brazos);
                 v_dinosaurio.push_back(dino);
-                for(int i=0;v_cuidadores.size();i++){￼
+                
+                for(int i=0;i<v_cuidadores.size();i++){
                     if(v_cuidadores[i]==c){
-                         c->setdinosaurio(dino);
+                        c->setdinosaurio(dino);
                     }
                 }
-
-
-
+                
             break;
         default:
             cout<<"opcion incorrecta"<<endl;
