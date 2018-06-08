@@ -50,8 +50,22 @@ void cuidadores1(){
     cout<<"1. Agregar cuidadores"<<endl;
     cout<<"2. Eliminar cuidadores"<<endl;
     cin>>tecla;
+    string nombre,ID,sexo;
+    int edad;
     switch(tecla){
         case '1'://agregar
+                
+                cout<<"ingrese el nombre:"<<endl;
+                cin>>nombre;
+                cout<<"ingrese su ID:"<<endl;
+                cin>>ID;
+                cout<<"ingrese el sexo(FEMENINO/MASCULINO):"<<endl;
+                cin>>sexo;
+                cout<<"ingrese edad:"<<endl;
+                cin>>edad;
+                cuidador=new cuidadores(nombre,ID,sexo,edad);
+                
+
                 
 
                 break;
@@ -75,6 +89,7 @@ void dinosaurios1(){
     cin>>tecla;
     switch(tecla){
         case '1'://agregar
+                
 
                 break;
         case '2'://listar
