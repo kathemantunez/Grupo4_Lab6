@@ -16,6 +16,8 @@ class Oviraptor: public Omnivoros{
     Oviraptor(string, int, int, string, string, int, int, int, int, bool);
     int getalturaCresta();
     bool getPlumaje();
+    void setAlturaCresta(int);
+    void setPlumaje(bool);
     virtual void toString();
 
 

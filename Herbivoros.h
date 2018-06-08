@@ -15,6 +15,8 @@ class Herbivoros:public Dinosaurios{
     Herbivoros(string, int, int, string, string, int,string,int);
     string getTipo();
     int getIncisivos();
+    void setTipo(string);
+    void setIncisivos(int);
     virtual void toString() = 0;
 
 };

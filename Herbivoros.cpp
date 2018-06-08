@@ -21,6 +21,14 @@ int Herbivoros::getIncisivos(){
   return incisivos;
 }
 
+void Herbivoros::setIncisivos(int incisivos){
+    this->incisivos = incisivos;
+}
+
+void Herbivoros::setTipo(string tipo){
+    this->tipo = tipo;
+}
+
 void Herbivoros::toString(){
-  
+
 }
