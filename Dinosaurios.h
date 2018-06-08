@@ -24,14 +24,15 @@ class Dinosaurios {
     string getFechaCreacion();
     string getSexo();
     int getLongitud();
+    //Cuidador*
 
     //Setters
-    void setNombre(string);
+    /*void setNombre(string);
     void setAltura(int);
     void setPeso(int);
     void setFechaCreacion(string);
     void setSexo(string);
     void setLongitud(int);
-
+    virtual void toString();*/
 };
 #endif
