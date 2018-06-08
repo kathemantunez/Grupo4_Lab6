@@ -24,6 +24,7 @@ void omnivoros1();
 void aereos1();
 void marinos1();
 
+
 vector<cuidadores*> v_cuidadores;
 vector<Dinosaurios*> v_dinosaurio;
 Dinosaurios* dino;
@@ -133,6 +134,7 @@ void dinosaurios1(){
     cout<<"4. Eliminar dinosaurios"<<endl;
     cin>>tecla;
     int cont=0;
+    char tecla2;
     switch(tecla){
         case '1'://agregar
                 if(v_cuidadores.size()!=0){
@@ -150,6 +152,8 @@ void dinosaurios1(){
                 }
                 break;
         case '3'://modificar
+                
+                
 
 
                 break;
@@ -543,10 +547,6 @@ void herbivoros1(){
          }
 }
 
-
-
-
-
 void carnivoros1(){
 
 
@@ -718,3 +718,4 @@ void carnivoros1(){
     }
 
 }
+
