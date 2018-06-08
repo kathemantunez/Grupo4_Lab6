@@ -6,7 +6,7 @@ using namespace std;
 class Carnivoros:public Dinosaurios{
 
     public:
-    
+
 
 };
 #endif
