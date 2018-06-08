@@ -20,3 +20,15 @@ int Omnivoros::getnumeroMolares(){
 int Omnivoros::getnumeroColmillos(){
   return numeroColmillos;
 }
+
+void Omnivoros::toString(){
+
+}
+
+void Omnivoros::setNumeroMolares(int numeroMolares){
+  this->numeroMolares = numeroMolares;
+}
+
+void Omnivoros::setNumeroColmillos(int numeroColmillos){
+  this->numeroColmillos = numeroColmillos;
+}

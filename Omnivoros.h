@@ -16,6 +16,8 @@ class Omnivoros:public Dinosaurios{
     int getnumeroMolares();
     int getnumeroColmillos();
     virtual void toString() = 0;
+    void setNumeroMolares(int);
+    void setNumeroColmillos(int);
 
 };
 #endif

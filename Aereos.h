@@ -17,6 +17,8 @@ class Aereos:public Dinosaurios {
     Aereos(string, int, int , string, string, int, bool, bool);
     bool getVuela();
     bool getPlumas();
+    void getVuela(bool);
+    void getPlumas(bool);
     virtual void toString();
 
 

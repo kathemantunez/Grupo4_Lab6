@@ -15,7 +15,8 @@ class Triceratops:public Herbivoros{
     int getLongitudCuernos();
     int getLongitudCuernosNasal();
     virtual void toString();
-
+    void setlongitudCuernos(int);
+    void setLongitudCuernosNasales(int);
 
 };
 #endif

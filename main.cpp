@@ -39,7 +39,7 @@ int main(){
         cout<<"3. Salir"<<endl;
         cin>>tecla;
         switch(tecla){
-            case '1': 
+            case '1':
                 cuidadores1();
                 break;
             case '2':
@@ -52,7 +52,7 @@ int main(){
                 cout<<"opcion incorrecta"<<endl;
                 break;
 
-            
+
         }
 
     }while(seguir==true);
@@ -75,7 +75,7 @@ void cuidadores1(){
     int cont=0;
     switch(tecla){
         case '1'://agregar
-                
+
                 cout<<"ingrese el nombre:"<<endl;
                 cin>>nombre;
                 cout<<"ingrese su ID:"<<endl;
@@ -92,7 +92,7 @@ void cuidadores1(){
                 v_cuidadores.push_back(cuidador);
                 break;
         case '2'://eliminar
-                
+
                 int opcion;
                 cout<<"¿A QUIEN DESEA ELIMINAR"<<endl;
                 for(int i=0;i<v_cuidadores.size();i++){
@@ -118,7 +118,7 @@ void cuidadores1(){
             cout<<"opcion incorrecta"<<endl;
             break;
     }
-    
+
 
 }
 
@@ -134,7 +134,6 @@ void dinosaurios1(){
     int cont=0;
     switch(tecla){
         case '1'://agregar
-                
                 if(v_cuidadores.size()!=0){
                     agregar_dinosaurio();
                 }else{
@@ -144,7 +143,10 @@ void dinosaurios1(){
         case '2'://listar
                  for(int i=0;i<v_dinosaurio.size();i++){
                     v_dinosaurio[i]->toString();
+<<<<<<< HEAD
                     cout<<endl;
+=======
+>>>>>>> b8accfb7a977eea2c74e524502ea2228c7f871e0
                 }
                 break;
         case '3'://modificar
@@ -177,7 +179,7 @@ void dinosaurios1(){
 void agregar_dinosaurio(){
     char tecla;
     cout<<"---------------"<<endl;
-    
+
     cout<<"Tipos de Dinosaurio"<<endl;
     cout<<"1. Carnivoros"<<endl;
     cout<<"2. Herbìvoros"<<endl;
@@ -208,7 +210,7 @@ void agregar_dinosaurio(){
     }
 }
 void marinos1(){
-    
+
     //datos del clase padre
     string nombre,fecha,sexo;
     int altura,peso,longitud;
@@ -246,7 +248,7 @@ void marinos1(){
                 cin>>longitud;
             }
             cout<<"Escoja cuidador:"<<endl;
-            
+
             int opcion;
                 for(int i=0;i<v_cuidadores.size();i++){
                     cout<<cont<<". "<<v_cuidadores[i]->getnombre()<<endl;
@@ -278,7 +280,7 @@ void marinos1(){
                          c->setdinosaurio(dino);
                     }
                 }
-        
+
 
 }
 
@@ -319,7 +321,7 @@ void aereos1(){
                 cin>>longitud;
             }
             cout<<"Escoja cuidador:"<<endl;
-            
+
             int opcion;
                 for(int i=0;i<v_cuidadores.size();i++){
                     cout<<cont<<". "<<v_cuidadores[i]->getnombre()<<endl;
@@ -399,7 +401,7 @@ void omnivoros1(){
                 cin>>longitud;
             }
             cout<<"Escoja cuidador:"<<endl;
-            
+
             int opcion;
                 for(int i=0;i<v_cuidadores.size();i++){
                     cout<<cont<<". "<<v_cuidadores[i]->getnombre()<<endl;
@@ -412,7 +414,7 @@ void omnivoros1(){
                 }else{
                     c=v_cuidadores[opcion];
                 }
-    
+
         //datos clase
         cout<<"numeros de molares:"<<endl;
         cin>>num_molares;
@@ -442,7 +444,7 @@ void omnivoros1(){
         }else{
             plumaje=false;
         }
- 
+
     dino=new Oviraptor(nombre,altura,peso,fecha,sexo,longitud,num_molares,num_colmillos,altura_cresta,plumaje);
     v_dinosaurio.push_back(dino);
      for(int i=0;v_cuidadores.size();i++){
@@ -450,7 +452,7 @@ void omnivoros1(){
                          c->setdinosaurio(dino);
                     }
                 }
-       
+
 
 }
 void herbivoros1(){
@@ -493,7 +495,7 @@ void herbivoros1(){
                 cin>>longitud;
             }
             cout<<"Escoja cuidador:"<<endl;
-            
+
             int opcion;
                 for(int i=0;i<v_cuidadores.size();i++){
                     cout<<cont<<". "<<v_cuidadores[i]->getnombre()<<endl;
@@ -537,9 +539,12 @@ void herbivoros1(){
                          c->setdinosaurio(dino);
                     }
          }
-
-
 }
+
+
+
+
+
 void carnivoros1(){
 
 
@@ -592,7 +597,7 @@ void carnivoros1(){
                 cin>>longitud;
             }
             cout<<"Escoja cuidador:"<<endl;
-            
+
             int opcion1;
                 for(int i=0;i<v_cuidadores.size();i++){
                     cout<<cont<<". "<<v_cuidadores[i]->getnombre()<<endl;
@@ -664,7 +669,7 @@ void carnivoros1(){
                 cin>>longitud;
             }
             cout<<"Escoja cuidador:"<<endl;
-            
+
             int opcion2;
                 for(int i=0;i<v_cuidadores.size();i++){
                     cout<<cont<<". "<<v_cuidadores[i]->getnombre()<<endl;
@@ -703,7 +708,7 @@ void carnivoros1(){
                          c->setdinosaurio(dino);
                     }
                 }
-                
+
 
 
             break;
@@ -712,7 +717,3 @@ void carnivoros1(){
     }
 
 }
-    
-
-
-

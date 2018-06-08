@@ -19,6 +19,16 @@ int Triceratops::getLongitudCuernos(){
 int Triceratops::getLongitudCuernosNasal(){
   return longitudCuernoNasal;
 }
-void Triceratops::toString(){
 
+void Triceratops::setLongitudCuernosNasales(int longitudCuernoNasal){
+    this->longitudCuernoNasal = longitudCuernoNasal;
+}
+
+void Triceratops::setlongitudCuernos(int longitudCuernos){
+    this->longitudCuernos = longitudCuernos;
+}
+
+void Triceratops::toString(){
+  cout <<"Nombre: " << nombre <<"Altura: "<<altura <<"Peso: "<< peso <<"Fecha: "<< fechaCreacion <<"Sexo: "<<sexo <<
+  "Longitud: "<< longitud << "Longitud Cuernos: "<< longitudCuernos << "Longitud Cuernos Nasales: "<< longitudCuernoNasal;
 }

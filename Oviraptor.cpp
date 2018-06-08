@@ -21,3 +21,16 @@ int Oviraptor::getalturaCresta(){
 bool Oviraptor::getPlumaje(){
   return plumaje;
 }
+
+void Oviraptor::toString(){
+  cout <<"Nombre: " << nombre <<"Altura: "<<altura <<"Peso: "<< peso <<"Fecha: "<< fechaCreacion <<"Sexo: "<<sexo <<
+  "Longitud: "<< longitud<< "Altura de la cresta: "<<alturaCresta << "Tiene plumaje?: "<< plumaje;
+}
+
+void Oviraptor::setAlturaCresta(int alturaCresta){
+  this->alturaCresta = alturaCresta;
+}
+
+void Oviraptor::setPlumaje(bool plumaje){
+  this->plumaje = plumaje;
+}

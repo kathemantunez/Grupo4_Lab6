@@ -26,15 +26,13 @@ class Dinosaurios {
     int getLongitud();
     //Cuidador*
     virtual void toString()=0;
-
     //Setters
-    /*void setNombre(string);
+    void setNombre(string);
     void setAltura(int);
     void setPeso(int);
     void setFechaCreacion(string);
     void setSexo(string);
     void setLongitud(int);
-    virtual void toString();*/
 
 };
 #endif

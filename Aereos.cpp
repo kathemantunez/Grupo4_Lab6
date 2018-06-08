@@ -18,6 +18,15 @@ bool Aereos::getPlumas(){
   return plumas;
 }
 
+void Aereos::getVuela(bool vuela){
+  this->vuela = vuela;
+}
+
+void Aereos::getPlumas(bool plumas){
+  this->plumas = plumas;
+}
+
 void Aereos::toString(){
-  
+cout <<"Nombre: " << nombre <<"Altura: "<<altura <<"Peso: "<< peso <<"Fecha: "<< fechaCreacion <<"Sexo: "<<sexo <<
+  "Longitud: "<< longitud << "Vuela?:  " <<vuela << "Tiene plumas?: "<<plumas;
 }
