@@ -35,5 +35,6 @@ class Dinosaurios {
     void setSexo(string);
     void setLongitud(int);
     virtual void toString();*/
+
 };
 #endif
