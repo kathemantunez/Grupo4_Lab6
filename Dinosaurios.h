@@ -25,6 +25,7 @@ class Dinosaurios {
     string getSexo();
     int getLongitud();
     //Cuidador*
+    virtual void toString();
 
     //Setters
     /*void setNombre(string);
