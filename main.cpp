@@ -143,7 +143,8 @@ void dinosaurios1(){
                 break;
         case '2'://listar
                  for(int i=0;i<v_dinosaurio.size();i++){
-                    cout<<v_dinosaurio[i]->toString()<<endl;
+                    v_dinosaurio[i]->toString();
+                    cout<<endl;
                 }
                 break;
         case '3'://modificar
@@ -697,7 +698,7 @@ void carnivoros1(){
            //string nombre, int altura, int peso, string fechaCreacion, string sexo, int longitud,string organo,string tipo,int alturaEspina,int longBrazos
                 dino=new Spinosaurus(nombre,altura,peso,fecha,sexo,longitud,organo_depredador,tipo,altura_espina,log_brazos);
                 v_dinosaurio.push_back(dino);
-                for(int i=0;v_cuidadores.size();i++){
+                for(int i=0;v_cuidadores.size();i++){￼
                     if(v_cuidadores[i]==c){
                          c->setdinosaurio(dino);
                     }
