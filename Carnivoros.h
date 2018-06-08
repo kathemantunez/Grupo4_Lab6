@@ -15,15 +15,15 @@ class Carnivoros:public Dinosaurios {
   public:
     //Constructor
     Carnivoros();
-    Carnivoros(string,string);
+    Carnivoros(string,int,int,string,string,int,string,string);
     //Getters
     string getOrgano();
-    int getTipo();
+    string getTipo();
 
     //Setters
     void setOrgano(string);
     void setTipo(string);
-    virtual void toString();
+    virtual void toString()=0;
 
 };
 #endif
