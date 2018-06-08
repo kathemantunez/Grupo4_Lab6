@@ -1,9 +1,15 @@
 #include <iostream>
 #include <string>
+#include "cuidador.h"
+#include "Dinosaurios.h"
+#include <vector>
 using namespace std;
 
 void cuidadores1();
 void dinosaurios1();
+
+vector<cuidadores*> v_cuidadores;
+vector<Dinosaurios*> v_dinosaurio;
 
 int main(){
     bool seguir=true;
@@ -40,11 +46,13 @@ int main(){
 //cuidadores
 void cuidadores1(){
     char tecla;
+    cuidadores* cuidador;
     cout<<"1. Agregar cuidadores"<<endl;
     cout<<"2. Eliminar cuidadores"<<endl;
     cin>>tecla;
     switch(tecla){
         case '1'://agregar
+                
 
                 break;
         case '2'://eliminar
