@@ -143,7 +143,7 @@ void dinosaurios1(){
                 break;
         case '2'://listar
                  for(int i=0;i<v_dinosaurio.size();i++){
-                    cout<<v_dinosaurio[i]->getNombre()<<endl;
+                    cout<<v_dinosaurio[i]->toString()<<endl;
                 }
                 break;
         case '3'://modificar
@@ -211,7 +211,7 @@ void marinos1(){
     //datos del clase padre
     string nombre,fecha,sexo;
     int altura,peso,longitud;
-    cuidadores* c=NULL;
+    cuidadores* c=new cuidadores();
     int cont=0;
     //Datos clase
     int num_aletas;
@@ -258,6 +258,7 @@ void marinos1(){
                 }else{
                     c=v_cuidadores[opcion];
                 }
+
         //datos clase
         cout<<"numero de aletas"<<endl;
         cin>>num_aletas;
@@ -271,6 +272,11 @@ void marinos1(){
         // string sexo, int longitud,int numAletas,string tipo
         dino=new Marinos(nombre,altura,peso,fecha,sexo,longitud,num_aletas,tipo);
          v_dinosaurio.push_back(dino);
+          for(int i=0;v_cuidadores.size();i++){
+                    if(v_cuidadores[i]==c){
+                         c->setdinosaurio(dino);
+                    }
+                }
         
 
 }
@@ -279,7 +285,7 @@ void aereos1(){
     //datos del clase padre
     string nombre,fecha,sexo;
     int altura,peso,longitud;
-    cuidadores* c=NULL;
+    cuidadores* c=new cuidadores();
     int cont=0;
     //datos clase
     bool vuela,plumas;
@@ -342,6 +348,11 @@ void aereos1(){
         }
         dino=new Aereos(nombre,altura,peso,fecha,sexo,longitud,vuela,plumas);
         v_dinosaurio.push_back(dino);
+         for(int i=0;v_cuidadores.size();i++){
+                    if(v_cuidadores[i]==c){
+                         c->setdinosaurio(dino);
+                    }
+                }
 
 
 
@@ -351,7 +362,7 @@ void omnivoros1(){
      //datos del clase padre
     string nombre,fecha,sexo;
     int altura,peso,longitud;
-    cuidadores* c=NULL;
+    cuidadores* c=new cuidadores();
     int cont=0;
     //Datos clase
     int num_molares,num_colmillos;
@@ -433,6 +444,11 @@ void omnivoros1(){
  
     dino=new Oviraptor(nombre,altura,peso,fecha,sexo,longitud,num_molares,num_colmillos,altura_cresta,plumaje);
     v_dinosaurio.push_back(dino);
+     for(int i=0;v_cuidadores.size();i++){
+                    if(v_cuidadores[i]==c){
+                         c->setdinosaurio(dino);
+                    }
+                }
        
 
 }
@@ -440,7 +456,7 @@ void herbivoros1(){
     //datos del clase padre
     string nombre,fecha,sexo;
     int altura,peso,longitud;
-    cuidadores* c=NULL;
+    cuidadores* c=new cuidadores();
     int cont=0;
     //Datos clase
     string tipo;
@@ -515,6 +531,11 @@ void herbivoros1(){
         // int incisivos, int longitudCuernos, int longitudCuernoNasal
         dino=new Triceratops(nombre,altura,peso,fecha,sexo,longitud,tipo,num_incisivos,long_cuernos,long_cuerno_nasal);
         v_dinosaurio.push_back(dino);
+         for(int i=0;v_cuidadores.size();i++){
+                    if(v_cuidadores[i]==c){
+                         c->setdinosaurio(dino);
+                    }
+         }
 
 
 }
@@ -524,7 +545,7 @@ void carnivoros1(){
     //datos del clase padre
     string nombre,fecha,sexo;
     int altura,peso,longitud;
-    cuidadores* c=NULL;
+    cuidadores* c=new cuidadores();
 
     //datos carnivoros
     string organo_depredador,tipo;
@@ -605,6 +626,11 @@ void carnivoros1(){
                 //string organo,string tipo,int consumoDiario,int numColmillos
                 dino=new TREX(nombre,altura,peso,fecha,sexo,longitud,organo_depredador,tipo,consumo_carne,colmillos);
                 v_dinosaurio.push_back(dino);
+                for(int i=0;v_cuidadores.size();i++){
+                    if(v_cuidadores[i]==c){
+                         c->setdinosaurio(dino);
+                    }
+                }
 
 
 
@@ -671,6 +697,12 @@ void carnivoros1(){
            //string nombre, int altura, int peso, string fechaCreacion, string sexo, int longitud,string organo,string tipo,int alturaEspina,int longBrazos
                 dino=new Spinosaurus(nombre,altura,peso,fecha,sexo,longitud,organo_depredador,tipo,altura_espina,log_brazos);
                 v_dinosaurio.push_back(dino);
+                for(int i=0;v_cuidadores.size();i++){
+                    if(v_cuidadores[i]==c){
+                         c->setdinosaurio(dino);
+                    }
+                }
+                
 
 
             break;
