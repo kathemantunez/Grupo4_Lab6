@@ -2,6 +2,16 @@
 #include <string>
 #include "cuidador.h"
 #include "Dinosaurios.h"
+#include "Aereos.h"
+#include "Carnivoros.h"
+#include "Herbivoros.h"
+#include "Marinos.h"
+#include "Omnivoros.h"
+#include "Oviraptor.h"
+#include "Spinosaurus.h"
+#include "TREX.h"
+#include "Triceratops.h"
+
 #include <vector>
 using namespace std;
 
@@ -16,6 +26,7 @@ void marinos1();
 
 vector<cuidadores*> v_cuidadores;
 vector<Dinosaurios*> v_dinosaurio;
+Dinosaurios* dino;
 
 int main(){
     bool seguir=true;
@@ -137,14 +148,17 @@ void dinosaurios1(){
                 break;
         case '3'://modificar
 
+
                 break;
         case '4'://eliminar
                 int opcion;
                 cout<<"¿QUÈ DINOSAURIO DESEA ELIMINAR"<<endl;
+                cout<<"------------------------------"<<endl;
                 for(int i=0;i<v_dinosaurio.size();i++){
                     cout<<cont<<". "<<v_dinosaurio[i]->getNombre()<<endl;
                     cont++;
                 }
+                cout<<"------------------------------"<<endl;
                 cin>>opcion;
                 if(opcion<0 || opcion>=v_dinosaurio.size()){
                     cout<<"incorrecto, opcion fuera de rango"<<endl;
@@ -193,6 +207,7 @@ void agregar_dinosaurio(){
     }
 }
 void marinos1(){
+    
     //datos del clase padre
     string nombre,fecha,sexo;
     int altura,peso,longitud;
@@ -201,6 +216,7 @@ void marinos1(){
     //Datos clase
     int num_aletas;
     string tipo;
+
     cout<<"---------------"<<endl;
     cout<<"Marinos"<<endl;
     //datos generales
@@ -251,6 +267,11 @@ void marinos1(){
         }
         cout<<"terrestre/marino o marino?:"<<endl;
         cin>>tipo;
+        //string nombre, int altura, int peso, string fechaCreacion,
+        // string sexo, int longitud,int numAletas,string tipo
+        dino=new Marinos(nombre,altura,peso,fecha,sexo,longitud,num_aletas,tipo);
+         v_dinosaurio.push_back(dino);
+        
 
 }
 
@@ -319,7 +340,8 @@ void aereos1(){
         }else{
             plumas=false;
         }
-
+        dino=new Aereos(nombre,altura,peso,fecha,sexo,longitud,vuela,plumas);
+        v_dinosaurio.push_back(dino);
 
 
 
@@ -408,15 +430,10 @@ void omnivoros1(){
         }else{
             plumaje=false;
         }
-
-        
-        
-
-
-
-
-
-
+ 
+    dino=new Oviraptor(nombre,altura,peso,fecha,sexo,longitud,num_molares,num_colmillos,altura_cresta,plumaje);
+    v_dinosaurio.push_back(dino);
+       
 
 }
 void herbivoros1(){
@@ -494,14 +511,11 @@ void herbivoros1(){
             cout<<"incorrecto,opcion fuera de rango"<<endl;
             cin>>long_cuerno_nasal;
         }
+        //string nombre, int altura, int peso, string fechaCreacion, string sexo, int longitud, string tipo,
+        // int incisivos, int longitudCuernos, int longitudCuernoNasal
+        dino=new Triceratops(nombre,altura,peso,fecha,sexo,longitud,tipo,num_incisivos,long_cuernos,long_cuerno_nasal);
+        v_dinosaurio.push_back(dino);
 
-
-
-    
-
-
-
-    //datos 
 
 }
 void carnivoros1(){
@@ -587,6 +601,10 @@ void carnivoros1(){
                      cout<<"incorrecto, intentelo de nuevo:"<<endl;
                     cin>>consumo_carne;
                 }
+                //string nombre, int altura, int peso, string fechaCreacion, string sexo, int longitud,
+                //string organo,string tipo,int consumoDiario,int numColmillos
+                dino=new TREX(nombre,altura,peso,fecha,sexo,longitud,organo_depredador,tipo,consumo_carne,colmillos);
+                v_dinosaurio.push_back(dino);
 
 
 
@@ -650,7 +668,9 @@ void carnivoros1(){
                     cout<<"incorrecto,opcion fuera de rango"<<endl;
                     cin>>log_brazos;
                 }
-
+           //string nombre, int altura, int peso, string fechaCreacion, string sexo, int longitud,string organo,string tipo,int alturaEspina,int longBrazos
+                dino=new Spinosaurus(nombre,altura,peso,fecha,sexo,longitud,organo_depredador,tipo,altura_espina,log_brazos);
+                v_dinosaurio.push_back(dino);
 
 
             break;
