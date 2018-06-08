@@ -11,6 +11,9 @@
 #include "Spinosaurus.h"
 #include "TREX.h"
 #include "Triceratops.h"
+#include <sstream>
+#include <fstream>
+#include <cstdlib>
 
 #include <vector>
 using namespace std;
@@ -23,6 +26,8 @@ void herbivoros1();
 void omnivoros1();
 void aereos1();
 void marinos1();
+void escribirArchivo();
+void cargarArchivo();
 
 
 vector<cuidadores*> v_cuidadores;
@@ -30,6 +35,7 @@ vector<Dinosaurios*> v_dinosaurio;
 Dinosaurios* dino;
 
 int main(){
+    //cargarArchivo();
     bool seguir=true;
     char tecla;
     do{
@@ -91,6 +97,7 @@ void cuidadores1(){
                 }
                 cuidador=new cuidadores(nombre,ID,sexo,edad);
                 v_cuidadores.push_back(cuidador);
+               // escribirArchivo();
                 break;
         case '2'://eliminar
 
@@ -719,3 +726,49 @@ void carnivoros1(){
 
 }
 
+void escribirArchivo(){
+    ofstream archivo;
+    archivo.open("cuidadores.txt",ios::trunc);
+
+    for(int i = 0; i < v_cuidadores.size(); i++){
+        archivo<<v_cuidadores[i]->getnombre()<<";";
+        archivo<<v_cuidadores[i]->getID()<<";";
+        //archivo<<v_cuidadores[i]->getedad()<<";";
+        archivo<<v_cuidadores[i]->getsexo()<<endl;
+    }
+    archivo.close();
+
+}
+
+void cargarArchivo(){
+    ifstream archivo;
+    string id;
+    string nombre;
+    string sexo;
+    string todo;
+
+
+    archivo.open("cuidadores.txt",ios::in);
+    while(!archivo.eof()){
+        getline(archivo,todo);
+        if(todo != ""){
+            int posI =0;
+            int posF=0;
+            vector<string> r;
+            string split;
+            while(posF >=0){
+                posF = todo.find(";",posI);
+                split = todo.substr(posI,posF-posI);
+                posI = posF+1;
+                r.push_back(split);
+            }
+            nombre = r.at(0);
+            id = r.at(1);
+            sexo = r.at(2);
+            cuidadores* cui = new cuidadores(nombre,id,sexo,0);
+            v_cuidadores.push_back(cui);
+            }
+    }
+    archivo.close();
+
+}
