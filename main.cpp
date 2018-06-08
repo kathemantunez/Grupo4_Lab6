@@ -111,7 +111,7 @@ void cuidadores1(){
 
         case '3':
                 for(int i=0;i<v_cuidadores.size();i++){
-                    v_cuidadores->toString();
+                    v_cuidadores[i]->toString();
                     cout<<endl;
                 }
 
